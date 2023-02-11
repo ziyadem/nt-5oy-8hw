@@ -17,6 +17,9 @@ const Result = ({resProp}) => {
     function handStat(){
         setQNA(false)
     }
+    function windowsLocation(){
+        windows.location()
+    }
     console.log(qna);
   return (
     <section className='result container'>
@@ -34,7 +37,8 @@ const Result = ({resProp}) => {
           <p className="item text-center">Passing Score: 60%</p>
           <p className="item text-center">Time Taken: {Math.floor((resProp[resProp.length-1].time)/60)}m{(resProp[resProp.length-1].time)%60}s</p>
           <div className="d-flex gap-3 mb-2">
-          <a  className='next result-buton d-flex align-items-center justify-content-center' ><img  src="/play.jpg" alt="" /> <h3>Play Again</h3></a> <a  className='next result-buton d-flex align-items-center justify-content-center' ><h3>Back to Home</h3><img  src="/play.jpg" alt="" /></a>
+          {/* <a  className='next result-buton d-flex align-items-center justify-content-center' > <h3>Play Again</h3></a> */}
+           <a onClick={windowsLocation}  className='next result-buton d-flex align-items-center justify-content-center' ><h3>Back to Home</h3></a>
 
           </div>
           </div>
